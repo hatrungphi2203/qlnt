@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà thuốc P&T USER</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="css/baocao.css">
+    <link rel="stylesheet" href="css/hienform.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
+
+</head>
+
+<body>
+    <script src="./API/auth/dangnhap.js"></script> 
+    <script>
+        kiemTraDN();
+        </script>
+    <!--header start-->
+    <header class="header">
+        <section class="flex">
+            <a href="baocao.html" class="logo">Hệ thống nhà thuốc</a>
+            <form action="" method="post" class="search-form">
+            </form>
+            <div>
+                <h2 id="tenChiNhanh">CN_Q7</h2>
+                <h3 id="tennv" onclick="hienForm()">Nguyễn Thanh Trà</h3>
+                <div id="hienForm" style="display: none;">
+                    <form>
+                        <button type="button" id="dang_xuat" onclick="logout()">Đăng xuất</button>
+                    </form>
+                </div>
+            </div>
+            <div id="icon" class="fas fa-bell" onclick="hienFormThuocHetHan()"></div>
+            <div id="hienFormHH" style="display: none;">
+                <div id="ds_thuochh">DANH SÁCH THUỐC HẾT HẠN</div>
+                <table id="my-tablenhh">
+                    <thead>
+                        <tr>
+                            <th>Mã SKU</th>
+                            <th>Tên biệt dược</th>
+                            <th>Ngày hết hạn</th>
+                            <th>Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody id="chitiet_thuochh">
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </header>
+    <!--header end-->
+
+    <!-- sidebar start -->
+    <div class="side-bar">
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="profile">
+            <img src="images/Nhathuocpt.png" class="image" alt="">
+        </div>
+        <nav class="navbar">
+            <a href="banhang.html"><i class="fas fa-tags"></i><span>Bán hàng</span></a>
+            <a href="kho.html"><i class="fas fa-warehouse"></i><span>Kho</span></a>
+            <a href="baocao.html"><i class="fas fa-file-alt"></i><span>Báo cáo</span></a>
+            <a href="khachhang.html"><i class="fas fa-user-friends"></i><span>Khách hàng</span></a>
+            <a href="hoadon.html"><i class="fas fa-receipt"></i><span>Hoá đơn</span></a>
+        </nav>
+    </div>
+    <!-- end sidebar -->
+    <div id="content1" class="content">
+        <!-- table lọc -->
+        <div class="filter-container">
+            <div>
+                <label for="start-date">Từ</label>
+                <input type="date" class="filter-input" id="start-date" onclick="rangbuocNgay()">
+                <label for="end-date">Đến </label>
+                <input type="date" class="filter-input" id="end-date" onclick="rangbuocNgay()">
+            </div>
+            <div>
+                <button class="filter-button" onclick="locNgay()"> <img width="24" height="24"
+                 src="https://img.icons8.com/material-outlined/24/filter--v1.png" alt="filter--v1" />Lọc</button>
+            </div>
+
+        </div>
+        <table id="example" class="display nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Giờ</th>
+                    <th>Số hoá đơn</th>
+                    <th>Mã SKU</th>
+                    <th>Mã nhóm</th>
+                    <th>Mã nhà sản xuất</th>
+                    <th>Mã đơn vị</th>
+                    <th>Tên biệt dược</th>
+                    <th>Số đăng ký</th>
+                    <th>Hoạt chất</th>
+                    <th>Đơn giá</th>
+                    <th>Giá bán</th>
+                    <th>HSD</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                    <th>Thuế</th>
+                    <th>Lợi nhuận</th>
+                    <th>Tên nhân viên</th>
+
+                </tr>
+            </thead>
+            <tbody id="table_baocao">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Giờ</th>
+                    <th>Số hoá đơn</th>
+                    <th>Mã SKU</th>
+                    <th>Mã nhóm</th>
+                    <th>Mã nhà sản xuất</th>
+                    <th>Mã đơn vị</th>
+                    <th>Tên biệt dược</th>
+                    <th>Số đăng ký</th>
+                    <th>Hoạt chất</th>
+                    <th>Đơn giá</th>
+                    <th>Giá bán</th>
+                    <th>HSD</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                    <th>Thuế</th>
+                    <th>Lợi nhuận</th>
+                    <th>Tên nhân viên</th>
+
+
+                </tr>
+            </tfoot>
+        </table>
+        <!-- hết table lọc -->
+
+    </div>
+    <script src="API/baocao/baocao.js"></script>
+    <script src="API/dangxuat/dangxuat.js"></script>
+    <script src="API/thuochethan/thuochethan.js"></script>
+</body>
+
+</html>

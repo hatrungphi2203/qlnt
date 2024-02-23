@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+  
+
+.containier_orther {
+    display: flex;
+    width  : 100%;
+}
+
+.containier {
+    flex: 2;
+    width: 100%;
+}
+
+.other {
+    flex      : 1.5;
+    width     : 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    min-height: 700px;
+
+}
+.hoadon{
+    margin: 5%;
+}
+.hoadon h1{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(26, 163, 213);
+    font-style: bold;
+    margin-bottom: 2pc;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #357de1;
+    color: white;
+    cursor: pointer;
+    background: #357de1;
+}
+
+.btn:hover{
+    background: #4babeb;
+    border: 0.2rem solid #4babeb;
+    color:#fff;
+}
+
+.sp{
+    font-family: 'Poppins', sans-serif;  
+}
+
+
+.sp .sp-tt:first-child{
+    margin-bottom: 2rem;
+}
+
+.sp .sp-tt .chua{
+    background: #ffffff;
+    border-radius: .5rem;
+    text-align: center;
+   
+    outline-offset: -1rem;
+    outline:.1rem solid rgba(0,0,F0,.1);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    transition: .2s linear;
+    margin: 1rem;
+}
+
+.sp .sp-tt .chua:hover{
+    box-shadow: 0 4px 7px 0 #66b5e3, 0 5px 17px 0 #66b5e3;
+    outline-offset: 0rem;
+    outline: .1rem solid #66b5e3; 
+}
+
+.sp .sp-tt .chua img{
+    height:10rem;
+}
+
+.sp .sp-tt .chua h3{
+    
+    font-size: 1.8rem;
+    color:#1e1958;
+}
+
+.sp .sp-tt .chua .gia{
+    font-size: 2rem;
+    color:#666;
+    padding:.5rem 0;
+}
+                     
+.sp .sp-tt .chua .stars i{
+    font-size: 1.7rem;
+    color:#20591D;
+    padding:.5rem 0;
+}

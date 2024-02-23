@@ -1,0 +1,1400 @@
+.nhappn {
+    margin-bottom: 20px;
+}
+
+.nhapctpn {
+    margin-top: 60px;
+}
+
+.nhappx {
+    margin-bottom: 20px;
+}
+
+.nhapctpx {
+    margin-top: 60px;
+}
+
+input {
+    border       : 1px solid #bdbaba;
+    border-radius: 3px;
+    padding      : 10px;
+    font-size    : 16px;
+}
+
+
+/* Xem kho */
+
+#example3 {
+    border-collapse: collapse;
+    width          : 100%;
+}
+
+#example3 th,
+#example3 td {
+    font-size : 15px;
+    padding   : 8px;
+    text-align: left;
+}
+
+#example3 td {
+    background-color: #e9f3f2;
+}
+
+#example3 tr th {
+    background-color: var(--white);
+}
+
+#example3 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#example3 tr:hover {
+    background-color: #ddd;
+}
+/* Hết xem kho */
+
+/* data table xem danh sách phiếu nhập */
+
+.dataTables_filter label input[type="search"] {
+    padding         : 8px;
+    border          : 2px solid #ddd;
+    border-radius   : 8px;
+    font-size       : 14px;
+    width           : 300px;
+    box-shadow      : none;
+    background-color: var(--white);
+    margin-right    : 30px;
+    margin-bottom   : 1.5%;
+    justify-content : center;
+    align-items     : center;
+
+
+}
+
+#example {
+    border-collapse: collapse;
+    width          : 100%;
+}
+
+#example th,
+#example td {
+    font-size : 15px;
+    padding   : 8px;
+    text-align: left;
+}
+
+#example td {
+    background-color: #e9f3f2;
+}
+
+#example tr th {
+    background-color: var(--white);
+}
+
+
+
+.dataTables_length,
+.dataTables_filter {
+    font-size: 13px;
+
+}
+
+.dataTables_length {
+    display: none;
+}
+
+
+/* đổi nên dataTables  */
+.dataTables_wrapper {
+    font-size: 13px;
+
+
+    margin-top     : 1%;
+    flex-wrap      : wrap;
+    align-items    : center;
+    justify-content: space-between;
+
+}
+
+
+.dataTables_info {
+    font-size: 13px;
+}
+
+.dataTables_paginate .paginate_button {
+    font-size: 13px;
+}
+
+.my-class {
+    font-size       : 16px;
+    color           : #333;
+    background-color: #f3f0e9;
+}
+
+#example tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#example tr:hover {
+    background-color: #ddd;
+}
+
+/* hết data table xem phiếu nhập */
+
+
+/* table xem chi tiết   phiếu nhập   */
+#my-table {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+
+
+#my-table th,
+#my-table td {
+    border       : 1px solid #ccc;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-table thead tr {
+    border       : none;
+    height       : 100%;
+    position     : sticky;
+    top          : 150px;
+    left         : 0;
+    right        : 0;
+    z-index      : 1000;
+    border-bottom: var(--border);
+}
+
+#my-table tr {
+    border: none;
+
+}
+
+#my-table tbody td {
+    background-color: #e9f3f2;
+    position        : sticky;
+    top             : 166px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+
+}
+
+#my-table tbody tr:hover td {
+    background-color: #9bdbe6;
+}
+
+#my-table tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-table tbody tr:hover td:not(:first-child) {
+    color    : #fff;
+    animation: move 2s linear infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+/* table xem  phiếu nhập   */
+
+
+/* Nhập phiếu nhập */
+#my-tablenhappn {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+
+
+#my-tablenhappn th {
+    border       : none;
+    padding      : 7px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhappn td {
+    border       : 1px solid #E4E4E4;
+    padding      : 10px 0px 10px 0px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhappn thead tr {
+    border       : #E4E4E4;
+    height       : 100%;
+    position     : sticky;
+    top          : 150px;
+    left         : 0;
+    right        : 0;
+    z-index      : 1000;
+    border-bottom: var(--border);
+}
+
+#my-tablenhappn tr {
+    border: none;
+
+}
+
+#my-tablenhappn tbody td {
+    border          : none;
+    background-color: #f8fcfc;
+    position        : sticky;
+    top             : 166px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+
+}
+
+#my-tablenhappn tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablenhappn input {
+    border       : 1px solid #bdbaba;
+    border-radius: 3px;
+    padding      : 10px;
+    font-size    : 16px;
+}
+
+#my-tablenhappn textarea {
+    border       : 1px solid #bdbaba;
+    height       : 39px;
+    width        : 300px;
+    border-radius: 3px;
+    margin-top   : 3px;
+}
+
+
+
+
+/* Hết nhập phiếu nhập */
+
+
+/* Chi tiết nhập phiếu nhập */
+
+#my-tablenhapctpn {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+
+
+#my-tablenhapctpn th,
+#my-tablenhapctpn td {
+    border       : 1px solid #ccc;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhapctpn thead tr {
+    border          : none;
+    height          : 100%;
+    position        : sticky;
+    top             : 150px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+    border-bottom   : var(--border);
+    background-color: #E4E4E4;
+}
+
+#my-tablenhapctpn thead td {
+    font-weight     : bold;
+    background-color: var(--white);
+}
+
+#my-tablenhapctpn tr {
+    border: none;
+}
+
+#my-tablenhapctpn tbody td {
+
+    position: sticky;
+    top     : 166px;
+    left    : 0;
+    right   : 0;
+    z-index : 1000;
+
+}
+
+#my-tablenhapctpn tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablenhapctpn button {
+    background-color: #139ab1;
+    /* Màu nền */
+    border          : none;
+    /* Không có đường viền */
+    color           : white;
+    /* Màu chữ */
+    padding         : 8px 16px;
+    /* Kích thước phần đệm */
+    text-align      : center;
+    /* Căn giữa nội dung */
+    text-decoration : none;
+    /* Không có gạch chân */
+    display         : inline-block;
+    /* Hiển thị dạng khối */
+    font-size       : 16px;
+    /* Cỡ chữ */
+    margin          : 4px 2px;
+    /* Khoảng cách giữa các nút */
+    border-radius   : 8px;
+    /* Bo tròn các góc */
+}
+
+#my-tablenhapctpn button:hover {
+    background-color: #f0685f;
+    /* Màu nền khi rê chuột */
+}
+
+#my-tablenhapctpn input {
+    border       : 1px solid #bdbaba;
+    border-radius: 3px;
+    padding      : 10px 0 10px 0;
+    font-size    : 16px;
+}
+
+#my-tablenhapctpn select {
+    border   : 1px solid;
+    padding  : 10px;
+    font-size: 16px;
+}
+
+#my-tablenhapctpn textarea {
+    border: 1px solid;
+
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+/*  Button Lưu phiếu nhập */
+#saveBtnPN {
+    background-color: #139ab1;
+    ;
+    cursor   : pointer;
+    border   : 1px solid #139ab1;
+    /* position : fixed; */
+    /* bottom   :  350px; */
+    right    : 3px;
+    /* padding  : 10px 20px; */
+    font-size: 16px;
+    border   : 1px;
+    color    : white;
+}
+
+#saveBtnPN:hover {
+    background-color: #f0685f;
+    cursor          : pointer;
+    border          : 1px solid #f0685f;
+}
+
+/*  Hết Button Lưu phiếu nhập */
+/* hết chi tiết nhập phiếu nhập */
+
+/* xem  phiếu xuất */
+
+#my-tablexempx {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+    max-height     : 1000px;
+    overflow-y     : auto;
+
+}
+
+
+
+#my-tablexempx {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    font-size      : 15px;
+    max-height     : 1000px;
+    overflow-y     : auto;
+}
+
+#my-tablexempx th {
+    border       : none;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablexempx td {
+    border       : 1px solid #E4E4E4;
+    padding      : 10px 0px 10px 0px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablexempx thead tr {
+    border       : #E4E4E4;
+    height       : 100%;
+    position     : sticky;
+    top          : 150px;
+    left         : 0;
+    right        : 0;
+    z-index      : 1000;
+    border-bottom: var(--border);
+}
+
+#my-tablexempx tbody tr {
+    border: none;
+    width : 100%;
+}
+
+#my-tablexempx tbody td {
+    border          : none;
+    background-color: #e9f3f2;
+    position        : sticky;
+    top             : 166px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+}
+
+#my-tablexempx tbody tr:hover td {
+    background-color: #9bdbe6;
+}
+
+#my-tablexempx tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablexempx input {
+    padding  : 10px;
+    font-size: 17px;
+}
+
+
+/* hết xem  phiếu xuất */
+/* Nhập phiếu xuất */
+#my-tablenhappx {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+
+
+#my-tablenhappx th {
+    border       : none;
+    padding      : 7px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhappx td {
+    border       : 1px solid #E4E4E4;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhappx thead tr {
+    border       : #E4E4E4;
+    height       : 100%;
+    position     : sticky;
+    top          : 150px;
+    left         : 0;
+    right        : 0;
+    z-index      : 1000;
+    border-bottom: var(--border);
+}
+
+#my-tablenhappx tr {
+    border: none;
+
+}
+
+#my-tablenhappx tbody td {
+    border          : none;
+    background-color: #e9f3f2;
+    position        : sticky;
+    top             : 166px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+
+}
+
+#my-tablenhappx tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablenhappx input {
+    border   : 1px solid #bdbaba;
+    padding  : 10px;
+    font-size: 16px;
+}
+
+#my-tablenhappx select {
+    border   : 1px solid #bdbaba;
+    padding  : 10px;
+    font-size: 16px;
+}
+
+#my-tablenhappx textarea {
+    border       : 1px solid #bdbaba;
+    height       : 39px;
+    width        : 300px;
+    border-radius: 3px;
+    margin-top   : 3px;
+
+}
+
+/* Hết nhập phiếu xuất */
+
+
+/* Chi tiết nhập phiếu xuất */
+
+#my-tablenhapctpx {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+#my-tablenhapctpx th,
+#my-tablenhapctpx td {
+    border       : 1px solid #bdbaba;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhapctpx thead tr {
+    border          : none;
+    height          : 100%;
+    position        : sticky;
+    top             : 150px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+    border-bottom   : var(--border);
+    background-color: #E4E4E4;
+}
+
+#my-tablenhapctpx thead td {
+    font-weight     : bold;
+    background-color: var(--white);
+}
+
+#my-tablenhapctpx tr {
+    border: none;
+}
+
+#my-tablenhapctpx tbody td {
+
+    position: sticky;
+    top     : 166px;
+    left    : 0;
+    right   : 0;
+    z-index : 1000;
+
+}
+
+
+
+#my-tablenhapctpx tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablenhapctpx button {
+    background-color: #1f85ad;
+    /* Màu nền */
+    border          : none;
+    /* Không có đường viền */
+    color           : white;
+    /* Màu chữ */
+    padding         : 8px 16px;
+    /* Kích thước phần đệm */
+    text-align      : center;
+    /* Căn giữa nội dung */
+    text-decoration : none;
+    /* Không có gạch chân */
+    display         : inline-block;
+    /* Hiển thị dạng khối */
+    font-size       : 16px;
+    /* Cỡ chữ */
+    margin          : 4px 2px;
+    /* Khoảng cách giữa các nút */
+    border-radius   : 8px;
+    /* Bo tròn các góc */
+}
+
+#my-tablenhapctpx button:hover {
+    background-color: #f0685f;
+    /* Màu nền khi rê chuột */
+}
+
+
+
+
+#my-tablenhapctpx input {
+    border   : 1px solid #bdbaba;
+    padding  : 10px;
+    font-size: 16px;
+}
+
+#my-tablenhapctpx select {
+    border   : 1px solid #bdbaba;
+    padding  : 10px;
+    font-size: 16px;
+}
+
+#my-tablenhapctpx textarea {
+    border: 1px solid #bdbaba;
+
+}
+
+.nhapctpx {
+    position: relative;
+}
+
+/*  Button Lưu phiếu xuất */
+#saveBtnPX {
+    background-color: #139ab1;
+    ;
+    cursor   : pointer;
+    border   : 1px solid #139ab1;
+    /* position : fixed; */
+    /* bottom   :  350px; */
+    right    : 3px;
+    /* padding  : 10px 20px; */
+    font-size: 16px;
+    border   : 1px;
+    color    : white;
+}
+
+#saveBtnPX:hover {
+    background-color: #f0685f;
+    cursor          : pointer;
+    border          : 1px solid #f0685f;
+}
+
+/*  Hết Button Lưu phiếu xuất */
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+/* hết chi tiết nhập phiếu xuất */
+
+
+
+
+
+/*  nhập kho ( xem và nhập phiếu nhâp) */
+
+.menu a.active {
+    color: #f0685f;
+}
+
+.menu a:focus,
+.menu a.active {
+    color: #f0685f;
+}
+
+.nhapkhomenu a {
+    display        : inline-block;
+    padding        : 10px 20px;
+    border         : 0px solid #ccc;
+    margin-right   : 30px;
+    /* khoảng cách giữa các thẻ a */
+    text-decoration: none;
+    color          : #333;
+    font-size      : 15px;
+    font-weight    : bold;
+    margin-left    : 90px;
+    margin-top     : 8px;
+}
+
+.nhapkhomenu a:hover {
+    color: #f00;
+}
+
+.nhapkhomenu a:active {
+    color: #f00;
+}
+
+.nhapkhomenu a:focus,
+.nhapkhomenu a.focus {
+    outline     : none;
+    color       : #f00;
+    border-color: #f00;
+}
+
+.nhapkhomenu a:focus {
+    outline     : none;
+    /* loại bỏ border mặc định khi focus */
+    color       : #f00;
+    /* đổi màu chữ khi được chọn */
+    border-color: #f00;
+    /* đổi màu border khi được chọn */
+}
+
+.contentpn {
+    display: none;
+    /* Ẩn nội dung mặc định */
+
+    /* chỉnh khoảng cách từ menu tới table */
+    margin-top: 3%;
+
+}
+
+/* thẻ treo */
+.nhapkhomenu {
+    background-color: var(--white);
+    padding-top     : -55px;
+    margin-top      : -65px;
+    height          : 50px;
+    width           : 1500px;
+    position        : sticky;
+    top             : 100px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+    border-bottom   : var(--border);
+}
+
+/* thẻ treo */
+
+/* hết nhập kho ( xem và nhập phiếu nhâp) */
+/* cái thanh xem và nhập phiếu xuất  */
+.xuatkhomenu a {
+    display        : inline-block;
+    padding        : 10px 20px;
+    border         : 0px solid #ccc;
+    margin-right   : 30px;
+    /* khoảng cách giữa các thẻ a */
+    text-decoration: none;
+    color          : #333;
+    font-size      : 15px;
+    font-weight    : bold;
+    margin-left    : 90px;
+    margin-top     : 8px;
+}
+
+.xuatkhomenu a:hover {
+    color: #f00;
+}
+
+.xuatkhomenu a:active {
+    color: #f00;
+}
+
+.xuatkhomenu a:focus,
+.xuatkhomenu a.focus {
+    outline     : none;
+    color       : #f00;
+    border-color: #f00;
+}
+
+.xuatkhomenu a:focus {
+    outline     : none;
+    /* loại bỏ border mặc định khi focus */
+    color       : #f00;
+    /* đổi màu chữ khi được chọn */
+    border-color: #f00;
+    /* đổi màu border khi được chọn */
+}
+
+.contentpx {
+    display: none;
+    /* Ẩn nội dung mặc định */
+
+    /* chỉnh khoảng cách từ menu tới table */
+
+    margin-top: 2%;
+}
+
+.xuatkhomenu {
+    background-color: var(--white);
+    padding-top     : -55px;
+    margin-top      : -65px;
+    height          : 50px;
+    width           : 1500px;
+}
+
+/* cái thanh  xem và nhập phiếu xuất */
+
+/* hết phiếu xuất kho*/
+
+/* xem phiếu xuât kho data table */
+
+#exampledspx {
+    border-collapse: collapse;
+    width          : 100%;
+}
+
+#exampledspx th,
+#exampledspx td {
+    font-size : 15px;
+    padding   : 8px;
+    text-align: left;
+}
+
+#exampledspx td {
+    background-color: #e9f3f2;
+}
+
+#exampledspx tr th {
+    background-color: var(--white);
+}
+
+#exampledspx tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#exampledspx tr:hover {
+    background-color: #ddd;
+}
+
+.dataTables_length,
+.dataTables_filter {
+    font-size: 13px;
+
+}
+
+/* Hết danh sách phiếu xuất data table */
+/* mấy cái nút nhập kho xuất kho đồ */
+.menu a.active {
+    color: red;
+}
+
+.menu a:focus,
+.menu a.active {
+    color: red;
+}
+
+.menu a {
+    display        : inline-block;
+    padding        : 10px 20px;
+    border         : 2px solid #ccc;
+    margin-right   : 30px;
+    /* khoảng cách giữa các thẻ a */
+    text-decoration: none;
+    color          : #333;
+    font-size      : 20px;
+    font-weight    : bold;
+}
+
+.menu a:hover {
+    background-color: #ccc;
+}
+
+.menu a:active {
+    background-color: #ccc;
+}
+
+.menu a:focus,
+.menu a.focus {
+    outline     : none;
+    color       : #f00;
+    border-color: #f00;
+}
+
+.menu a:focus {
+    outline     : none;
+    /* loại bỏ border mặc định khi focus */
+    color       : #f00;
+    /* đổi màu chữ khi được chọn */
+    border-color: #f00;
+    /* đổi màu border khi được chọn */
+}
+
+
+/* hết mấy cái nút mấy cái nút nhập kho xuất kho đồ */
+
+.content {
+    display: none;
+    /* Ẩn nội dung mặc định */
+
+    /* chỉnh khoảng cách từ menu tới table */
+
+    margin-top: 5%;
+}
+
+section.flex {
+    display: flex;
+
+}
+
+div:nth-child(2) select {
+    padding         : 10px;
+    font-size       : 16px;
+    border          : 1px solid #ccc;
+    border-radius   : 4px;
+    background-color: #fff;
+}
+
+div:nth-child(3) h2 {
+    color           : #333;
+    font-size       : 20px;
+    padding         : 5px;
+    border          : 1px solid #ccc;
+    border-radius   : 4px;
+    text-align      : center;
+    background-color: #6fc1f7;
+
+}
+
+div:nth-child(3) h2:hover {
+    background-color: #0d00c2;
+    color           : #fff;
+}
+
+div:nth-child(3) h3 {
+    color    : #333;
+    font-size: 15px;
+    margin   : 0;
+    padding  : 10px;
+
+    margin-left: 5px;
+    transition : background-color 0.3s ease-in-out;
+}
+
+div:nth-child(3) h2:hover {
+    background-color: #0077c2;
+    color           : #fff;
+}
+
+div:nth-child(3) h3:hover {
+    color           : #2036c2;
+    background-color: #c3d2db;
+}
+
+.display {
+    font-size: 10px;
+}
+
+:root {
+    --main-color : #8e44ad;
+    --red        : #e74c3c;
+    --orange     : #f39c12;
+    --light-color: #888;
+    --light-bg   : #eee;
+    --black      : #2c3e50;
+    --white      : #fff;
+    --border     : .1rem solid rgba(0, 0, 0, .2);
+}
+
+* {
+    font-family    : 'Nunito', sans-serif;
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    outline        : none;
+    border         : none;
+    text-decoration: none;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color           : #fff;
+}
+
+html {
+    font-size : 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width : 1rem;
+    height: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+body {
+    background-color: var(--light-bg);
+    padding-left    : 30rem;
+}
+
+body.dark {
+    --light-color: #aaa;
+    --light-bg   : #333;
+    --black      : #fff;
+    --white      : #222;
+    --border     : .1rem solid rgba(255, 255, 255, .2);
+}
+
+body.active {
+    padding-left: 0;
+}
+
+section {
+    padding  : 2rem;
+    margin   : 0 auto;
+    max-width: 1200px;
+}
+
+.heading {
+    font-size     : 2.5rem;
+    color         : var(--black);
+    margin-bottom : 2.5rem;
+    border-bottom : var(--border);
+    padding-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+
+/* mở đầu header */
+
+
+.header {
+
+
+    position: sticky;
+
+
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    background-color: var(--white);
+    z-index         : 1000;
+    border-bottom   : var(--border);
+}
+
+/* cai khúc này lưu ý */
+.header .flex {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    position       : relative;
+    padding        : 1.5rem 2rem;
+}
+
+.header .flex .logo {
+    font-size: 2.5rem;
+    color    : var(--black);
+}
+
+
+.header .flex .icons div {
+    font-size       : 2rem;
+    color           : var(--black);
+    background-color: var(--light-bg);
+    border-radius   : .5rem;
+    height          : 4.5rem;
+    width           : 4.5rem;
+    line-height     : 4.5rem;
+    cursor          : pointer;
+    text-align      : center;
+    margin-left     : .7rem;
+}
+
+.header .flex .icons div:hover {
+    background-color: var(--black);
+    color           : var(--white);
+}
+
+.header .flex .profile {
+    position        : absolute;
+    top             : 120%;
+    right           : 2rem;
+    background-color: var(--white);
+    border-radius   : .5rem;
+    padding         : 1.5rem;
+    text-align      : center;
+    overflow        : hidden;
+    transform-origin: top right;
+    transform       : scale(0);
+    transition      : .2s linear;
+    width           : 30rem;
+}
+
+.header .flex .profile.active {
+    transform: scale(1);
+}
+
+.header .flex .profile .image {
+    height       : 10rem;
+    width        : 10rem;
+    border-radius: 50%;
+    object-fit   : contain;
+    margin-bottom: 1rem;
+}
+
+.header .flex .profile .name {
+    font-size    : 2rem;
+    color        : var(--black);
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+}
+
+.header .flex .profile .role {
+    font-size: 1.8rem;
+    color    : var(--light-color);
+}
+
+/* cái nút tìm kiếm trong header  */
+
+
+/* kết thúc cái nút tìm kiếm trong header */
+/* hết cái header */
+
+
+/* mở đầu side bar */
+.side-bar {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    height          : 1000px;
+    width           : 30rem;
+    background-color: var(--white);
+    border-right    : var(--border);
+}
+
+.side-bar #close-btn {
+    text-align: right;
+    padding   : 2rem;
+    display   : none;
+}
+
+.side-bar #close-btn i {
+    text-align   : right;
+    font-size    : 2.5rem;
+    background   : var(--red);
+    border-radius: .5rem;
+    color        : var(--white);
+    cursor       : pointer;
+    height       : 4.5rem;
+    width        : 4.5rem;
+    line-height  : 4.5rem;
+    text-align   : center;
+}
+
+.side-bar #close-btn i:hover {
+    background-color: var(--black);
+}
+
+.side-bar .profile {
+    padding   : 2rem;
+    text-align: center;
+
+}
+
+.side-bar .profile img {
+    height       : 15rem;
+    width        : 20rem;
+    border-radius: 50%;
+    object-fit   : cover;
+    margin-bottom: .5 rem;
+}
+
+.side-bar .profile span {
+    color    : var(--light-color);
+    font-size: 1.6rem;
+}
+
+.side-bar .navbar {
+    margin-top: 1rem;
+}
+
+.side-bar .profile .role {
+    font-size: 1.8rem;
+    color    : var(--light-color);
+}
+
+.side-bar .navbar a {
+    display  : block;
+    padding  : 2rem;
+    font-size: 2rem;
+}
+
+.side-bar .navbar a i {
+    margin-right: 1.5rem;
+    color       : #0077c2;
+    transition  : .2s linear;
+}
+
+.side-bar .navbar a span {
+    color: var(--light-color);
+}
+
+.side-bar .navbar a:hover {
+    background-color: var(--light-bg);
+}
+
+.side-bar .navbar a:hover i {
+    margin-right: 2.5rem;
+}
+
+.side-bar.active {
+    left: -30rem;
+}
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media (max-width:1200px) {
+
+    body {
+        padding-left: 0;
+    }
+
+    .side-bar {
+        left      : -30rem;
+        transition: .2s linear;
+    }
+
+    .side-bar #close-btn {
+        display: block;
+    }
+
+    .side-bar.active {
+        left        : 0;
+        box-shadow  : 0 0 0 100vw rgba(0, 0, 0, .8);
+        border-right: 0;
+    }
+
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #search-btn {
+        display: inline-block;
+    }
+
+
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .flex-btn {
+        gap      : 0;
+        flex-flow: column;
+    }
+
+    .home-grid .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about .row .image img {
+        height: 25rem;
+    }
+
+}

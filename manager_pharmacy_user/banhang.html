@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà thuốc P&T USER</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/banhang.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link rel="stylesheet" href="css/hienform.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <script src="./API/auth/dangnhap.js"></script>
+    <script>
+        kiemTraDN();
+    </script>
+    <!--header start-->
+    <header class="header">
+        <section class="flex">
+            <form action="" method="post" class="search-form">
+                <div class="search-input">
+                    <input type="search" id="inputtimkiem" placeholder="Nhập thông tin cần tìm..." onkeydown="if (event.keyCode === 13) return false;" autocomplete="off" required />
+                    <img src="images/search.png" alt="" onclick="timThuoc()">
+                </div>
+            </form>
+            <div>
+                <select id="timkiemthuoc">
+                    <option value="tenbietduoc">Tên Biệt Dược</option>
+                    <option value="hoatchat">Hoạt chất</option>
+                    <option value="nhomthuoc">Nhóm thuốc</option>
+                </select>
+            </div>
+            <div>
+                <h2 id="tenChiNhanh">CN_Q7</h2>
+                <h3 id="tennv" onclick="hienForm()">Nguyễn Thanh Trà</h3>
+                <div id="hienForm" style="display: none;">
+                    <form>
+                        <button type="button" id="dang_xuat" onclick="logout()">Đăng xuất</button>
+                    </form>
+                </div>
+            </div>
+            <div id="icon" class="fas fa-bell" onclick="hienFormThuocHetHan()"></div>
+            <div id="hienFormHH" style="display: none;">
+                <div id="ds_thuochh">DANH SÁCH THUỐC GẦN HẾT HẠN</div>
+                <table id="my-tablenhh">
+                    <thead>
+                        <tr>
+                            <th>Mã SKU</th>
+                            <th>Tên biệt dược</th>
+                            <th>Ngày hết hạn</th>
+                            <th>Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody id="chitiet_thuochh">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </header>
+    <!--header end-->
+    <!-- sidebar start -->
+    <div class="side-bar">
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="profile">
+            <img src="images/Nhathuocpt.png" class="image" alt="">
+        </div>
+        <nav class="navbar">
+            <a href="banhang.html"><i class="fas fa-tags"></i><span>Bán hàng</span></a>
+            <a href="kho.html"><i class="fas fa-warehouse"></i><span>Kho</span></a>
+            <a href="baocao.html"><i class="fas fa-file-alt"></i><span>Báo cáo</span></a>
+            <a href="khachhang.html"><i class="fas fa-user-friends"></i><span>Khách hàng</span></a>
+            <a href="hoadon.html"><i class="fas fa-receipt"></i><span>Hoá đơn</span></a>
+
+        </nav>
+    </div>
+    <!-- end sidebar -->
+
+
+    <div class="containier_orther">
+
+        <div class="containier">
+            <section class="sp" id="sp">
+                <div class="swiper sp-tt">
+                    <div class="swiper-wrapper" id="container-banhang">
+
+                    </div>
+
+                </div>
+                <!-- Khúc dưới -->
+            </section>
+
+        </div>
+        <div class="other">
+            <div class="hoadon">
+                <form class="form-hoadon"><button class="huy" onclick="nhanhuy()"><img width="48" height="48"
+                            src="https://img.icons8.com/color/48/delete-sign--v1.png" alt="delete-sign--v1" /></button>
+                    <h1>HOÁ ĐƠN</h2>
+
+                        <div class="form-item">
+                            <label for="tennhomt">Khách hàng</label>
+                            <input type="type" id="timsdt" name="timsdt" onkeyup="timSDT()"
+                                onkeydown="if (event.keyCode === 13) return false;" value="0" autocomplete="off"
+                                required>
+                            <ul id="myULSDT">
+
+                            </ul>
+
+                        </div>
+
+                        <div class="form-item">
+                            <label for="tennhanvien">Nhân Viên</label>
+                            <input type="text" id="tenNhanVien" name="tenNhanVien"
+                                onkeydown="if (event.keyCode === 13) return false;" autocomplete="off" required
+                                readonly>
+
+                        </div>
+
+                        <table id="my-table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên biệt dược</th>
+                                    <th>Số lượng</th>
+                                    <th>Đơn giá</th>
+                                    <th>Thành tiền</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+
+                        </table>
+                        <div class="thanhtoan">
+                            <div class="thanhtoan_tien">
+                                <h3>Tổng tiền:</h3>
+                                <h3 id="total-price"> 1234</h3>
+                            </div>
+                            <div class="thanhtoan_tien">
+                                <h3>Tiền thuế GTGT:</h3>
+                                <h3 id="tax-price"> 1234</h3>
+                            </div>
+                            <div class="thanhtoan_tien">
+                                <h3>Tổng thanh toán:</h3>
+                                <h3 id="final-total-price"> 1234</h3>
+                            </div>
+                        </div>
+                        <div class="luuthanhtoan">
+                            <!-- <button class="luutam" type="button">Lưu tạm</button> -->
+
+                            <button class="luu" onclick="luuHoaDon()" type="button">Lưu hoá đơn</button>
+                        </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            kiemTraDN();
+            hienThiTatCaBanHang();
+        };
+    </script>
+    <script src="API/banhang/banhang.js"></script>
+    <script src="API/banhang/hoadon.js"></script>
+    <script src="API/khachhang/khachhang.js"></script>
+    <script src="API/banhang/thuoc.js"></script>
+    <script src="API/dangxuat/dangxuat.js"></script>
+    <script src="API/thuochethan/thuochethan.js"></script>
+
+</body>
+
+</html>

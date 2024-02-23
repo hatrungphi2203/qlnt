@@ -1,0 +1,318 @@
+#hienForm {
+    position        : fixed;
+    top             : 120px;
+    right           : 0;
+    float           : right;
+    background-color: white;
+    padding         : 10px;
+    border-radius   : 5px;
+    box-shadow      : 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index         : 1;
+    /* margin-right    : 240px; */
+    background-color: #c3d2db;
+}
+
+#dang_xuat {
+    background-color: #0077c2;
+    /* Đặt màu nền cho button */
+    color           : white;
+    /* Đặt màu chữ cho button */
+    border          : none;
+    /* Bỏ đường viền cho button */
+    border-radius   : 5px;
+    /* Đổ cong các góc của button */
+    padding         : 10px 20px;
+    /* Tạo khoảng cách giữa nội dung của button và viền của button */
+    cursor          : pointer;
+    /* Đổi hình con trỏ khi rê chuột vào button */
+    margin-top      : 10px;
+    /* Tạo khoảng cách giữa button và các phần tử khác */
+}
+
+#dang_xuat:hover {
+    background-color: #0d00c2;
+    color           : #fff;
+}
+
+#tenChiNhanh {
+    color           : #333;
+    font-size       : 20px;
+    padding         : 5px;
+    border          : 1px solid #ccc;
+    border-radius   : 4px;
+    text-align      : center;
+    background-color: #6fc1f7;
+
+}
+
+#tenChiNhanh:hover {
+    background-color: #0d00c2;
+    color           : #fff;
+}
+
+#tennv {
+    color    : #333;
+    font-size: 20px;
+    margin   : 0;
+    padding  : 10px;
+
+    margin-left: 5px;
+    transition : background-color 0.3s ease-in-out;
+}
+
+#tenChiNhanh:hover {
+    background-color: #0077c2;
+    color           : #fff;
+}
+
+#tennv:hover {
+    color           : #2036c2;
+    background-color: #c3d2db;
+}
+
+/* thông báo hết hạn */
+#icon {
+    font-size  : 3rem;
+    /* Kích thước icon */
+    right      : 70rem;
+    /* Khoảng cách với các thẻ khác */
+    color      : #0077c2;
+    margin-left: -5px;
+
+}
+
+#icon:hover {
+    font-size: 3rem;
+    /* Kích thước icon */
+    right    : 30rem;
+    /* Khoảng cách với các thẻ khác */
+    color    : #0d00c2;
+}
+
+#hienFormHH {
+    position        : absolute;
+    top             : 3cm;
+    /* Khoảng cách với icon */
+    left            : 0;
+    z-index         : 1;
+    /* Đảm bảo hiển thị lên trên các thẻ khác */
+    background-color: white;
+    /* Đổi màu nền của div */
+    padding         : 1rem;
+    /* Khoảng cách giữa nội dung và viền của div */
+    border-radius   : 5px;
+    /* Bo tròn các góc của div */
+    box-shadow      : 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng cho div */
+}
+
+#my-tablenhh {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+
+
+#my-tablenhh th,
+#my-tablenhh td {
+    border       : 1px solid #ccc;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhh thead tr {
+    border       : none;
+    height       : 100%;
+    position     : sticky;
+    top          : 150px;
+    left         : 0;
+    right        : 0;
+    z-index      : 1000;
+    border-bottom: var(--border);
+}
+
+#my-tablenhh tr {
+    border: none;
+
+}
+
+#my-tablenhh tbody td {
+    background-color: #e9f3f2;
+    position        : sticky;
+    top             : 166px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+
+}
+
+#my-tablenhh tbody tr:hover td {
+    background-color: #9bdbe6;
+}
+
+#my-tablenhh tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablenhh tbody tr:hover td:not(:first-child) {
+    color    : #fff;
+    animation: move 2s linear infinite alternate;
+}
+
+#my-tablenhh {
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    /* chiều cao tối đa của bảng */
+    font-size      : 15px;
+
+    max-height: 1000px;
+    overflow-y: auto;
+
+}
+
+
+
+#my-tablenhh th,
+#my-tablenhh td {
+    border       : 1px solid #ccc;
+    padding      : 10px;
+    text-align   : center;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+}
+
+#my-tablenhh thead tr {
+    border       : none;
+    height       : 100%;
+    position     : sticky;
+    top          : 150px;
+    left         : 0;
+    right        : 0;
+    z-index      : 1000;
+    border-bottom: var(--border);
+}
+
+#my-tablenhh tr {
+    border: none;
+
+}
+
+#my-tablenhh tbody td {
+    background-color: #e9f3f2;
+    position        : sticky;
+    top             : 166px;
+    left            : 0;
+    right           : 0;
+    z-index         : 1000;
+
+}
+
+#my-tablenhh tbody tr:hover td {
+    background-color: #9bdbe6;
+}
+
+#my-tablenhh tr {
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+#my-tablenhh tbody tr:hover td:not(:first-child) {
+    color    : #fff;
+    animation: move 2s linear infinite alternate;
+}
+
+/* cái nút chi nhánh với tên nhân viên */
+
+#my-tablenhh {
+    border-collapse: collapse;
+    width          : 100%;
+}
+
+#my-tablenhh thead {
+    height: auto;
+}
+
+
+#my-tablenhh th {
+    background-color: #ccc;
+}
+
+
+section.flex {
+    display: flex;
+
+}
+
+div:nth-child(2) select {
+    padding         : 10px;
+    font-size       : 16px;
+    border          : 1px solid #ccc;
+    border-radius   : 4px;
+    background-color: #fff;
+}
+
+div:nth-child(3) h2 {
+    color           : #333;
+    font-size       : 20px;
+    padding         : 5px;
+    border          : 1px solid #ccc;
+    border-radius   : 4px;
+    text-align      : center;
+    background-color: #6fc1f7;
+
+}
+
+div:nth-child(3) h2:hover {
+    background-color: #0d00c2;
+    color           : #fff;
+}
+
+div:nth-child(3) h3 {
+    color      : #333;
+    font-size  : 15px;
+    margin     : 0;
+    padding    : 10px;
+    margin-left: 5px;
+    transition : background-color 0.3s ease-in-out;
+}
+
+div:nth-child(3) h2:hover {
+
+    background-color: #0077c2;
+    color           : #fff;
+}
+
+div:nth-child(3) h3:hover {
+
+    color           : #2036c2;
+    background-color: #c3d2db;
+}
+
+#tennv {
+    margin-top: 10px;
+}
+
+#ds_thuochh {
+    width      : 80%;
+    height     : 50px;
+    text-align : center;
+    line-height: 50px;
+    margin     : 0 auto;
+    font-size  : 15px;
+    font-weight: bold;
+}
